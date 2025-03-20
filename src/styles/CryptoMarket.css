@@ -1,0 +1,421 @@
+.crypto-market {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #1a1032 0%, #2a1a4a 100%);
+  color: white;
+}
+
+.crypto-market .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.crypto-market h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+/* Crypto Charts Carousel */
+.crypto-carousel {
+  position: relative;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.carousel-container {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.crypto-card {
+  flex: 0 0 100%;
+  background-color: rgba(58, 36, 94, 0.7);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(138, 75, 175, 0.3);
+  transition: transform 0.4s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.crypto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.crypto-title h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.crypto-symbol {
+  color: #b67cff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.crypto-price {
+  text-align: right;
+}
+
+.price-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.price-change {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+}
+
+.price-change.positive {
+  color: #00ff9d;
+  background-color: rgba(0, 255, 157, 0.1);
+}
+
+.price-change.negative {
+  color: #ff5252;
+  background-color: rgba(255, 82, 82, 0.1);
+}
+
+.chart-container {
+  height: 200px;
+  margin: 1.5rem 0;
+  background-color: rgba(42, 26, 74, 0.4);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.crypto-chart {
+  width: 100%;
+  height: 100%;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.time-frames {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.time-btn {
+  background: transparent;
+  border: 1px solid rgba(138, 75, 175, 0.3);
+  color: #ccc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-btn:hover {
+  background-color: rgba(138, 75, 175, 0.2);
+  color: white;
+}
+
+.time-btn.active {
+  background-color: rgba(138, 75, 175, 0.5);
+  color: white;
+  border-color: rgba(138, 75, 175, 0.8);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(58, 36, 94, 0.8);
+  color: white;
+  border: 1px solid rgba(138, 75, 175, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(138, 75, 175, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(138, 75, 175, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #b67cff;
+  transform: scale(1.2);
+}
+
+/* Crypto News Section */
+.crypto-news {
+  margin-top: 4rem;
+}
+
+.crypto-news h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  color: #b67cff;
+  font-size: 1.2rem;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.news-card {
+  background-color: rgba(58, 36, 94, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(138, 75, 175, 0.3);
+}
+
+.news-image {
+  height: 160px;
+  overflow: hidden;
+  background-color: rgba(42, 26, 74, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.news-link {
+  color: #b67cff;
+  text-decoration: none;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-top: auto;
+  transition: color 0.2s ease;
+}
+
+.news-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Newsletter Subscription */
+.news-subscribe {
+  background: linear-gradient(135deg, rgba(58, 36, 94, 0.8) 0%, rgba(42, 26, 74, 0.8) 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid rgba(138, 75, 175, 0.3);
+}
+
+.news-subscribe h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-subscribe p {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+
+.subscribe-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.subscribe-form button {
+  padding: 0 1.5rem;
+  background: linear-gradient(135deg, #8a4baf 0%, #6a3b8f 100%);
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background: linear-gradient(135deg, #9a5bcf 0%, #7a4b9f 100%);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .crypto-market {
+    padding: 3rem 1rem;
+  }
+  
+  .crypto-market h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .carousel-container {
+    height: 300px;
+  }
+  
+  .crypto-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .crypto-price {
+    align-self: flex-start;
+    margin-top: 1rem;
+  }
+  
+  .news-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .news-image {
+    height: 130px;
+  }
+  
+  .news-content {
+    padding: 1rem;
+  }
+  
+  .news-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .news-meta {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subscribe-form {
+    flex-direction: column;
+  }
+  
+  .subscribe-form input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .subscribe-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+  
+  .carousel-btn.prev {
+    left: 5px;
+  }
+  
+  .carousel-btn.next {
+    right: 5px;
+  }
+} 

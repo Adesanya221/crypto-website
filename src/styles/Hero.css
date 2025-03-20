@@ -1,5 +1,4 @@
 .hero {
-  
   background: url('../assets/images/circuit-pattern.jpg') no-repeat;
   background-size: cover;
   background-position: center;
@@ -7,9 +6,11 @@
   padding: 6rem 2rem;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .hero-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -20,6 +21,7 @@
 .hero-content {
   max-width: 500px;
   z-index: 1;
+  width: 100%;
 }
 
 .hero h1 {
@@ -48,6 +50,11 @@
 .hero-buttons {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+  margin-bottom: 0.5rem;
 }
 
 .btn-secondary {
@@ -89,6 +96,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   z-index: 1;
   overflow: hidden;
+  will-change: transform;
 }
 
 .floating {
@@ -115,6 +123,7 @@
   border-radius: 50%;
   filter: blur(20px);
   animation: pulse 4s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 @keyframes pulse {
@@ -145,6 +154,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 2;
 }
 
 .currency {
@@ -185,23 +195,32 @@
   z-index: 0;
 }
 
+/* Tablet Devices */
 @media (max-width: 992px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
+    width: 100%;
   }
   
   .hero-content {
     margin-bottom: 3rem;
+    max-width: 100%;
+    padding: 0 1rem;
   }
   
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   
-  .hero-image-container, .hero-image {
-    width: 300px;
-    height: 300px;
+  .hero-image-container {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .hero-image {
+    width: 280px;
+    height: 280px;
   }
   
   .hero-buttons {
@@ -214,6 +233,7 @@
   }
 }
 
+/* Mobile Devices */
 @media (max-width: 768px) {
   .hero {
     padding: 4rem 1rem;
@@ -225,10 +245,83 @@
   
   .hero h2 {
     font-size: 1.5rem;
+    letter-spacing: 1px;
   }
   
-  .hero-image-container, .hero-image {
-    width: 250px;
-    height: 250px;
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .hero-image-container {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .hero-image {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .price-tag {
+    padding: 0.5rem 1rem;
+    right: 0;
+  }
+  
+  .value {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 0.8rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+  
+  .hero-image-container {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .hero-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .price-tag {
+    bottom: -15px;
+    right: 0;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .currency {
+    font-size: 0.7rem;
+  }
+  
+  .value {
+    font-size: 0.9rem;
+  }
+  
+  .trend {
+    font-size: 0.7rem;
   }
 } 
